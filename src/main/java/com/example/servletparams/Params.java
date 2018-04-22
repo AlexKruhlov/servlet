@@ -17,5 +17,4 @@ public class Params extends HttpServlet {
 		printWriter.println("<html> <body>" + getServletConfig().getInitParameter("First name") + "<p>"
 				+ getServletConfig().getInitParameter("Second name") + "</body></html>");
 	}
-
 }

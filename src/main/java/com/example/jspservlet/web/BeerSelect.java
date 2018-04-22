@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.example.jspservlet.model.BeerExpert;
 
 public class BeerSelect extends HttpServlet {
-//	private static final String TEXT_AND_HTML_TYPE = "text/html";
+	// private static final String TEXT_AND_HTML_TYPE = "text/html";
 	private static final String COLOR_PARAMETER = "color";
 
 	@Override
@@ -20,11 +20,11 @@ public class BeerSelect extends HttpServlet {
 		String c = req.getParameter(COLOR_PARAMETER);
 		BeerExpert beerExpert = new BeerExpert();
 		List<String> result = beerExpert.getBrands(c);
-		
-//		resp.setContentType(TEXT_AND_HTML_TYPE);
-//		PrintWriter out = resp.getWriter();
-//		out.println("Bear Selection Advice<br>");
-		
+
+		// resp.setContentType(TEXT_AND_HTML_TYPE);
+		// PrintWriter out = resp.getWriter();
+		// out.println("Bear Selection Advice<br>");
+
 		req.setAttribute("styles", result);
 		RequestDispatcher view = req.getRequestDispatcher("result.jsp");
 		view.forward(req, resp);
