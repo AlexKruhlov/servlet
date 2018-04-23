@@ -1,0 +1,26 @@
+<web-app xmlns="http://java.sun.com.xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<context-param>
+		<param-name>dog</param-name>
+		<param-value>grey pound</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>com.example.listener.simple.ApplicationContextListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>dogservlet</servlet-name>
+		<servlet-class>com.example.listener.simple.DogBreedServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>dogservlet</servlet-name>
+		<url-pattern>/dog</url-pattern>
+	</servlet-mapping>
+
+</web-app>
