@@ -5,7 +5,7 @@
 
 	<servlet>
 		<servlet-name>person</servlet-name>
-		<servlet-class>com.example.noscripting.servlet.NameServlet</servlet-class>
+		<servlet-class>com.example.noscripting.withservlet.servlet.NameServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
